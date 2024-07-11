@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<h3>Registro contacto</h3>
+	<form action="" method="post" th:object="${contacto}">
+		<div>
+			<label for="nombre">Nombre:</label> 
+			<input id="nombre" type="text" placeholder="Digite su nombre" th:field="*{nombre}">
+
+		</div>
+
+		<div>
+			<label for="celular">Celular:</label>
+			 <input id="celular" type="text" placeholder="Digite su celular" th:field="*{celular}">
+
+		</div>
+
+		<div>
+			<label for="email">Email:</label>
+			 <input id="email" type="email" placeholder="Digite su email" th:field="*{email}">
+
+		</div>
+
+		<div>
+			<label for="fechaNacimiento">Fecha nacimiento:</label> 
+			<input id="fechaNacimiento" type="date" th:field="*{fechaNacimiento}">
+
+		</div>
+
+		<button>Guardar</button>
+		<a href="/"> Cancelar </a>
+
+	</form>
+
+</body>
+</html>
